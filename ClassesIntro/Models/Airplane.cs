@@ -1,3 +1,5 @@
+using System.Reflection.Metadata.Ecma335;
+
 public class Airplane {
     public string? Name { get; set; } // default value for string => null
     public string? Airline { get; set; }
@@ -24,5 +26,33 @@ public class Airplane {
         this.Airline = airline;
     }
 
+    
+
+    private void DeployAirbags() {
+        Console.WriteLine($"Deploying the airbags!");
+    }
+
+    public void Fly() {
+        // return $"{this.Name} is flying!";
+
+        bool result = this.SystemCheck();
+        if(!result){
+            Console.WriteLine("Cannot fly.");
+            return;
+        }
+
+        Console.WriteLine($"{this.Name} is flying!");
+    }
+
+    private bool SystemCheck() {
+        bool hasProblem = false; // For sake of example
+        Console.WriteLine($"Checking system...");
+        if(hasProblem) {
+            return false;
+        }
+        Console.WriteLine($"Check complete.");
+
+        return true;
+    }
     
 }
