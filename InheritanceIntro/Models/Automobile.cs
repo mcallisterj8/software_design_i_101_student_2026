@@ -7,7 +7,7 @@ public class Automobile : Vehicle {
         Console.WriteLine("Automobile constructor!");
         this.LicensePlate = licensePlate;
         this.SeatingCapacity = seatingCapcity;
-        this.IsElectric = isElectric;
+        this.IsElectric = isElectric;              
     }
 
     public override void Drive() {
