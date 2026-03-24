@@ -56,12 +56,12 @@ public class Airplane {
         this.DeployLandingGear();
     }
 
-    // public override string ToString() {
-    //     return $"Airplane Details:\n" +
-    //            $"  Name: {this.Name}\n" +
-    //            $"  Max Altitude: {this.MaxAltitude} ft\n" +
-    //            $"  Number of Engines: {this.NumEngines}\n" +
-    //            $"  Fuel Level: {this.FuelLevel} units";
-    // }
+    public override string ToString() {
+        return $"Airplane Details:\n" +
+               $"  Name: {this.Name}\n" +
+               $"  Max Altitude: {this.MaxAltitude} ft\n" +
+               $"  Number of Engines: {this.NumEngines}\n" +
+               $"  Fuel Level: {this.FuelLevel} units";
+    }
 
 }
