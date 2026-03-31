@@ -1,4 +1,4 @@
-public static class HouseChanger {  
+public static class HouseChanger {
 
     public static int Test { get; set; }
 
@@ -8,12 +8,12 @@ public static class HouseChanger {
 	 */
     public static int AddMeasurements(int heightOne, int heightTwo) {
         int result = heightOne + heightTwo;
-        heightOne = 8;        
+        heightOne = 8;
 
         return result;
     }
 
-    
+
 
     /*
 	 * What would you expect the variable in the Program.cs which was passed in
