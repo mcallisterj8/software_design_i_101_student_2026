@@ -1,5 +1,3 @@
-namespace GenericsExamples.Models;
-
 public class Box<T> {
     public required string Name { get; set; }
     public required T Item { get; set; }
