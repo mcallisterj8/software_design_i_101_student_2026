@@ -2,7 +2,9 @@
 Console.WriteLine("GENERIC BOX<T> EXAMPLES");
 Console.WriteLine("============================================================");
 
-List<int> numbers = new List<int> { 100, 80, 40, 42, 64, 12, 4 };
+List<int> numbers =
+    new List<int> { 100, 80, 40, 42, 64, 12, 4 };
+
 
 Box<int> numberBox = new Box<int> {
     Name = "numberBox",

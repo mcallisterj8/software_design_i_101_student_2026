@@ -14,4 +14,8 @@ public class Box<T> {
         return output;
     }
 
+    public T ExampleMethod() {
+        return this.Item;
+    }
+
 }

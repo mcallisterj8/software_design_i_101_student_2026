@@ -1,7 +1,13 @@
+using System.Numerics;
+
 public class SmartBox<T> where T : Phone {
     public required string Name { get; set; }
     public required T Item;
     public List<T> ItemList { get; set; } = new List<T> { };
+
+    public U SomeMethod<U>(U x) where U : INumber<U> {
+        return x;
+    }
 
     public void SurfWebOnList() {
         foreach (T elem in this.ItemList) {
