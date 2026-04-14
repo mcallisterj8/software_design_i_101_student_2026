@@ -2,17 +2,15 @@
 Console.WriteLine("EXAMPLE 1: Divide By Zero");
 Console.WriteLine("============================================================");
 
-try
-{
+try {
     int numerator = 10;
     int denominator = 0;
     int result = numerator / denominator;
 
     Console.WriteLine($"Result: {result}");
-}
-catch (DivideByZeroException ex)
-{
-    string errorMessage = $"A divide by zero exception occurred. Message: {ex.Message}";
+} catch (DivideByZeroException ex) {
+    string errorMessage
+        = $"A divide by zero exception occurred. Message: {ex.Message}";
 
     Console.WriteLine(errorMessage);
     /*
@@ -37,17 +35,14 @@ Console.WriteLine("\n===========================================================
 Console.WriteLine("EXAMPLE 2: Parsing Invalid Input");
 Console.WriteLine("============================================================");
 
-try
-{
+try {
     // Imagine we received this from the user.
     string userInput = "abc";
     // Attempt to parse integer from result, which will fail in this example.
     int parsedNumber = int.Parse(userInput);
 
     Console.WriteLine($"Parsed number: {parsedNumber}");
-}
-catch (FormatException ex)
-{
+} catch (FormatException ex) {
     string errorMessage = $"A format exception occurred. The input could not be converted into an integer. Message: {ex.Message}";
 
     Console.WriteLine(errorMessage);
@@ -73,13 +68,10 @@ Console.WriteLine("\n===========================================================
 Console.WriteLine("EXAMPLE 3: Index Out Of Range");
 Console.WriteLine("============================================================");
 
-try
-{
+try {
     int[] numbers = { 10, 20, 30 };
     Console.WriteLine($"Item at index 5: {numbers[5]}");
-}
-catch (IndexOutOfRangeException ex)
-{
+} catch (IndexOutOfRangeException ex) {
     string errorMessage = $"An index out of range exception occurred. The program tried to access an index that does not exist. Message: {ex.Message}";
 
     Console.WriteLine(errorMessage);
@@ -112,8 +104,7 @@ Console.WriteLine("============================================================"
     The manner in which these are checked is similar to an else-if chain.
 */
 
-try
-{
+try {
     string? maybeNumber = null;
     // string? maybeNumber = "abc"; // This will cause FormatException to be thrown.
 
@@ -121,9 +112,7 @@ try
 
     int number = int.Parse(maybeNumber);
     Console.WriteLine($"Parsed number: {number}");
-}
-catch (NullReferenceException ex)
-{
+} catch (NullReferenceException ex) {
     string errorMessage = $"A null reference exception occurred. The program tried to use an object that was null. Message: {ex.Message}";
 
     Console.WriteLine(errorMessage);
@@ -143,9 +132,7 @@ catch (NullReferenceException ex)
      */
     ;
     // throw;
-}
-catch (FormatException ex)
-{
+} catch (FormatException ex) {
     string errorMessage = $"A format exception occurred. The input could not be converted into an integer. Message: {ex.Message}";
 
     Console.WriteLine(errorMessage);
@@ -164,9 +151,7 @@ catch (FormatException ex)
         object instance.
     */
     // throw;
-}
-catch (Exception ex)
-{
+} catch (Exception ex) {
     string errorMessage = $"A general exception occurred. Message: {ex.Message}";
 
     Console.WriteLine(errorMessage);
@@ -192,14 +177,11 @@ Console.WriteLine("\n===========================================================
 Console.WriteLine("EXAMPLE 5: Finally Block");
 Console.WriteLine("============================================================");
 
-try
-{
+try {
     Console.WriteLine("Inside try block.");
     int[] values = { 1, 2, 3 };
     Console.WriteLine(values[10]);
-}
-catch (Exception ex)
-{
+} catch (Exception ex) {
     string errorMessage = $"An exception was caught. Message: {ex.Message}";
 
     Console.WriteLine(errorMessage);
@@ -217,11 +199,9 @@ catch (Exception ex)
         example where we call the "new" keyword, we are creating a new exception
         object instance.
     */
-    // throw;
-}
-finally
-{
-    Console.WriteLine("The finally block always runs.");
+    throw;
+} finally {
+    Console.WriteLine("\nThe finally block always runs.\n");
 }
 
 
@@ -229,12 +209,10 @@ Console.WriteLine("\n===========================================================
 Console.WriteLine("EXAMPLE 6: Throwing An Argument Exception");
 Console.WriteLine("============================================================");
 
-try
-{
+try {
     int age = -5;
 
-    if (age < 0)
-    {
+    if (age < 0) {
         /*
             The exception that is thrown when one of the arguments provided to a method is not valid.
             Using here for an invalid conditional though.
@@ -243,9 +221,7 @@ try
     }
 
     Console.WriteLine($"Age: {age}");
-}
-catch (ArgumentException ex)
-{
+} catch (ArgumentException ex) {
     string errorMessage = $"An argument exception occurred. Message: {ex.Message}";
 
     Console.WriteLine(errorMessage);
@@ -271,13 +247,10 @@ Console.WriteLine("\n===========================================================
 Console.WriteLine("EXAMPLE 7: Program Continues After Catch");
 Console.WriteLine("============================================================");
 
-try
-{
+try {
     int number = int.Parse("hello");
     Console.WriteLine(number);
-}
-catch (FormatException ex)
-{
+} catch (FormatException ex) {
     string errorMessage = $"A format exception occurred. Message: {ex.Message}";
 
     Console.WriteLine(errorMessage);
